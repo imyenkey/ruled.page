@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Simple Note App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruled.page - Take Note!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="container">
-    <h1>Simple Note App</h1>
-    
-    <form id="noteForm">
-      <textarea id="noteInput" placeholder="Write your note here..."></textarea>
-      <button type="button" onclick="addNote()">Add Note</button>
-    </form>
-
-    <ul id="noteList"></ul>
-  </div>
-
-  <script src="app.js"></script>
+    <header>
+        <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+        <div class="title-bar">
+            <h1>Ruled.page</h1>
+            <p>Organize your thoughts, conquer your goals.</p>
+        </div>
+    </header>
+    <main id="app-content"></main>
+    <nav id="menu">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </nav>
+    <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+    <script src="script.js"></script>
 </body>
 </html>
-
