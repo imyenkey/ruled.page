@@ -67,4 +67,4 @@ darkModeToggle.addEventListener('click', () => {
 
 // Remember, you can extend this code with additional functionalities and connect it to your HTML and CSS to create a fully functional note-taking app.
 
-I hope this clarifies the code and provides a good starting point for your development process. Feel free to ask any further questions as you progress!
+//I hope this clarifies the code and provides a good starting point for your development process. Feel free to ask any further questions as you progress!
