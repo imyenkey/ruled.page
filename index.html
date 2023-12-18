@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruled.page - Take Note!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Note Taking App</title>
 </head>
 <body>
-    <header>
-        <button id="menu-toggle"><i class="fas fa-bars"></i></button>
-        <div class="title-bar">
-            <h1>Ruled.page</h1>
-            <p>Organize your thoughts, conquer your goals.</p>
+    <div class="container">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
         </div>
-    </header>
-    <main id="app-content"></main>
-    <nav id="menu">
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul>
-    </nav>
-    <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+        <div class="menu" id="menu">
+            <div class="close-icon" onclick="toggleMenu()"></div>
+            <h1>Note App</h1>
+            <p>Organize your thoughts, conquer your goals.</p>
+            <a href="#">About</a>
+        </div>
+        <div class="note-area">
+            <textarea id="noteInput" placeholder="Start typing your notes..."></textarea>
+        </div>
+        <div class="toggle-theme" onclick="toggleTheme()">
+            <img src="sun-icon.png" alt="Light Mode" class="light-mode" id="lightMode">
+            <img src="moon-icon.png" alt="Dark Mode" class="dark-mode" id="darkMode">
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

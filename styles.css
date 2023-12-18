@@ -1,103 +1,86 @@
 body {
-  font-family: sans-serif;
   margin: 0;
-  padding: 0;
-  height: 100vh;
-  transition: background-color 0.5s ease-in-out;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
 }
 
-#app-content {
-  height: calc(100vh - 50px);
-  overflow-y: auto;
-  padding: 20px;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: inherit;
-  color: #333;
-  transition: color 0.5s ease-in-out;
-}
-
-#menu-toggle {
-  background-color: inherit;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.title-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-p {
-  margin: 0;
-  font-size: 1.2em;
-  color: #666;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 300px;
-  height: 100vh;
-  background-color: #eee;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: left 0.5s ease-in-out;
-}
-
-nav ul {
-  list-style: none;
-  padding: 20px;
-}
-
-nav li {
-  margin-bottom: 10px;
-}
-
-nav a {
-  color: #333;
-  text-decoration: none;
-  font-size: 1.5em;
-}
-
-#dark-mode-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: inherit;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.fa-moon {
-  color: #ddd;
-}
-
-.dark-mode {
+.container {
+  position: relative;
   background-color: #000;
   color: #fff;
-  .fa-moon {
-      color: #fff;
-  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-#menu.open {
-  left: 0;
+.menu-toggle {
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.menu-icon,
+.close-icon {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: background-color 0.3s ease;
+}
+
+.close-icon {
+  transform: rotate(45deg);
+}
+
+.menu {
+  display: none;
+  padding: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.note-area {
+  flex: 1;
+  padding: 20px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  overflow: auto;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  resize: none;
+}
+
+.toggle-theme {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.light-mode,
+.dark-mode {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.light-mode {
+  display: block;
 }
